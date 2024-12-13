@@ -1,0 +1,181 @@
+.footer{
+    width: 100%;
+    background: #A73C50;
+}
+
+.footer_cont{
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 60px 0 40px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.footer a{
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'NanumGothic';
+}
+
+.footer p{
+    font-size: 12px;
+    color: #dcdcdc;
+}
+
+.footer img{
+    width: 40px;
+}
+
+.footer h2{
+    width: 68px;
+    margin-right: 50px;
+}
+
+.footer h2 img{
+    width: 68px;
+}
+
+.fc_top ul{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.fc_top ul li{
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ffffff;
+}
+
+.fc_top ul li:last-child{
+    border: none;
+}
+
+.fw{
+    font-weight: bold;
+}
+
+.fc_bottom>p{
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.address{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.address p{
+    padding:0 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #dcdcdc;
+}
+
+.address p:last-child{
+    border: none;
+}
+
+.sns{
+    position: absolute;
+    right: 0;
+   bottom:40px;
+}
+
+/* tablet pc ver */
+@media (min-width:768px) and (max-width:1279px){
+    .footer_cont{
+        width: 767px;
+    }
+
+    .fc_top ul{
+        flex-wrap: wrap; /* 줄바꿈 가능하게 설정 */
+        margin-bottom: 30px;
+    }
+
+    .fc_top ul li{
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        white-space: nowrap; /* 글자들이 줄바꿈되지 않도록 설정 */
+    }
+
+    .fc_top ul li:nth-child(4){
+        border: none;
+    }
+
+    .address{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    
+    .address p:nth-child(3){
+        border: none;
+    }
+
+    .sns{
+        position: absolute;
+        right: 0;
+       bottom:20px;
+    }
+}
+
+/* mobile ver */
+@media screen and (max-width:767px){
+    .footer_cont{
+        display: block;
+        width: 375px;
+        text-align: center;
+    }
+
+    .footer h2{
+        margin: 0 auto 20px;
+    }
+
+    .fc_top ul{
+        display: block;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .fc_top ul li{
+        margin-bottom: 10px;
+        padding: 0;
+        box-sizing: border-box;
+        border-right: none;
+    }
+
+    .fc_top ul li:last-child{
+        border-bottom: 1px solid #bebebe;
+        padding-bottom: 20px;
+    }
+
+    .address{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .address p{
+        margin-bottom: 10px;
+        padding:none;
+        box-sizing: border-box;
+        border-right: none;
+    }
+
+    .fc_bottom>p{
+        margin-bottom: 20px;
+    }
+
+    .footer ul a:hover {
+        font-size: 20px;
+        font-weight: bold;
+        transition: all 0.2s;
+    }
+    
+    .sns{
+        position: relative;
+       bottom:0;
+    }
+}
+
+
+

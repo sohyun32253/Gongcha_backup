@@ -1,0 +1,284 @@
+.mypage{
+    width: 100%;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.mypage_banner{
+    background: url(./images/mypage_banner.jpg) no-repeat;
+    background-size: cover;
+    height: 240px;
+    position: relative;
+}
+
+.mypage_banner h2{
+    color: #ffffff;
+    position: absolute;
+    left: 120px;
+    top: 80px;
+}
+
+.mypage_banner p{
+    color: #ffffff;
+    position: absolute;
+    left: 120px;
+    top: 140px;
+}
+
+.mypage_wrap{
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mypage_gnb{
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.mypage_gnb li{
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #C30F30;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.mypage_gnb li:first-child{
+    border-right: 0;
+}
+
+.mypage_gnb li button{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: #C30F30;
+    background: none;
+    border: none;
+}
+
+.mypage_gnb li:hover{
+    background: #C30F30;
+    transition: all 0.3s;
+}
+
+.mypage_gnb li:hover button{
+    color: #ffffff;
+}
+
+.mypage_cont img{
+    width: 374px;
+    margin-bottom: 20px;
+}
+
+.mypage_cont img{
+    margin-bottom: 40px;
+}
+
+.mypage_cont h3{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.mb_change_cont>p{
+    margin-bottom: 60px;
+}
+
+.membership_card_wrap{
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 1px 2px 3px rgba(132, 132, 132, 0.5);
+    border-radius: 15px;
+    margin-bottom: 80px;
+}
+
+.membership_card{
+    background: url(./images/stamp_card.png);
+    border-radius: 15px 15px 0 0;
+    max-width: 600px;
+    height: 40px;
+
+}
+
+.membership_card_cont{
+    position: absolute;
+    top: 60px;
+    left: 80px;
+}
+
+.membership_card p{
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+.membership_card .mb{
+    margin-bottom: 40px;
+}
+
+.membership_card .mb span{
+    color: #C30F30;
+    font-weight: bold;
+}
+
+.membership_card button{
+    border: none;
+    width: 217px;
+    height: 50px;
+    background: #C30F30;
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_wrap{
+    display: flex;
+    align-items: center;
+}
+
+.stamp_view{
+    margin-right: 20px;
+}
+
+.stamp_info h4{
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.stamp_info p{
+    font-size: 16px;
+}
+
+.stamp_info span{
+    color: #626262;
+}
+
+.service{
+    margin-bottom: 60px;
+}
+
+.reward{
+    margin-bottom: 60px;
+}
+
+.stamp_view img{
+    width: 20px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.my_coupon_view img{
+    width: 28px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .popup_inner {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  table{
+    text-align: center;
+    border-radius: 15px;
+  }
+
+  table th{
+    background: #C30F30;
+    color: #ffffff;
+    border-top:  0;
+    width: 200px;
+    height: 50px;
+  }
+  
+  td{
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    width: 200px;
+    height: 60px;
+  }
+
+  .popup button {
+   position: absolute;
+   top: -20px;
+   right: 0;
+   width: 30px;
+   height: 30px;
+   background: none;
+  }
+  
+  .mypage_gnb li button:hover {
+    background: #C30F30;
+    color: #ffffff;
+  }
+
+  .mypage_gnb li button.active{
+    background: #C30F30;
+    color: #ffffff;
+  }
+
+  .mycard_wrap{
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 1px 2px 3px rgba(132, 132, 132, 0.5);
+    border-radius: 15px;
+    margin-bottom: 80px;
+}
+
+  .mycard{
+    background: url(./images/stamp_card.png);
+    border-radius: 15px 15px 0 0;
+    max-width: 600px;
+    height: 40px;
+
+}
+
+.mycard_cont{
+    position: absolute;
+    top: 80px;
+    left: 110px;
+}
+
+.mycard_cont img{
+    margin-bottom: 10px;
+}
+
+.mycard_cont .barcode_number{
+    font-size: 24px;
+}

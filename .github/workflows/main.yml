@@ -1,0 +1,44 @@
+name: CI and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      # 1. 코드 체크아웃 및 서브모듈 초기화
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # 서브모듈 활성화
+
+      # 2. Node.js 버전 설정
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # 3. 의존성 설치 및 빌드
+      - run: npm install
+      - run: npm run build  # 빌드 명령어 (React/Vue 등에서 사용)
+
+      # 4. 테스트 실행
+      - run: npm test
+
+      # 5. GitHub Pages 배포
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # 빌드 결과 디렉토리 (React/Vue는 dist, CRA는 build)

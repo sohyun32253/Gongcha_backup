@@ -1,0 +1,204 @@
+.place_banner_wrap{
+    width: 100%;
+}
+
+.place_banner{
+    background: url(../src/images/store_banner.jpg) no-repeat;
+    text-align: center;
+    width: 100%;
+    background-size: cover;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.place_banner_cont{
+    max-width: 1280px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.place_banner h2,.place_banner p{
+    color: #ffffff;
+}
+
+.place_banner h2{
+    position: absolute;
+    left: 0;
+}
+
+.place_banner p{
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+}
+
+.map_wrap {
+    width: 100%;
+    padding: 100px;
+    overflow: hidden; 
+}
+
+.map_wrap_cont {
+    max-width: 1280px; 
+    margin: 0 auto; 
+    position: relative; 
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu_wrap{
+    width: 29%;
+    height: 500px;
+}
+
+.search_field{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#menu_wrap form select{
+    width: 48%;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #C30F30;
+    box-sizing: border-box;
+}
+
+#menu_wrap form select:first-child{
+    margin-right: 10px;
+}
+
+#menu_wrap form input{
+    width: 100%; 
+}
+
+#menu_wrap form button{
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: #C30F30;
+    border: none;
+}
+
+#menu_wrap form button img{
+    width: 20px;
+    height: 20px;
+}
+
+#placesList{
+    height: 500px;
+    overflow: scroll;
+    background: #f1f2f2;
+}
+
+#placesList li{
+    padding: 10px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+strong{
+    font-size: 16px;
+    color: #C30F30;
+}
+
+.map_wrap p {
+    font-size: 14px;
+  }
+
+hr{
+    margin: 7px 0;
+}
+
+/* tablet pc ver */
+@media (min-width:768px) and (max-width:1279px){
+
+    .map_wrap {
+        padding: 60px;
+        overflow: visible; 
+    }
+
+    .place_banner_cont{
+        max-width: 768px;
+    }
+    
+    .place_banner h2,.menu_banner p{
+        color: #ffffff;
+    }
+    
+    .place_banner h2{
+        position: relative;
+        left: 0;
+    }
+    
+    .place_banner p{
+        position: relative;
+        left: 0;
+        bottom: 0;
+    }
+
+    #menu_wrap form select{
+        width: 100%;
+    }
+
+    #placesList{
+        height: 440px;
+    }
+}
+
+/* mobile ver */
+@media screen and (max-width:767px){
+    .place{
+        height: 1650px;
+    }
+
+    .map_wrap {
+        padding: 40px;
+        overflow: visible; 
+    }
+
+    .place_banner_cont{
+        max-width: 375px;
+    }
+    
+    .place_banner h2,.menu_banner p{
+        color: #ffffff;
+    }
+    
+    .place_banner h2{
+        position: relative;
+        left: 0;
+        font-size: 32px;
+    }
+    
+    .place_banner p{
+        position: relative;
+        left: 0;
+        bottom: 0;
+        font-size: 16px;
+    }
+
+    .map_wrap_cont {
+        display: block;
+        width: 100%;
+    }
+
+    .map_container{
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+
+    #menu_wrap{
+        width: 100%;
+        height: 500px;
+    }
+
+    #menu_wrap form select{
+        width: 100%;
+    }
+}
+

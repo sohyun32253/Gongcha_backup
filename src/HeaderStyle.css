@@ -1,0 +1,277 @@
+.header{
+    width: 100%;
+    z-index: 10;
+    position: relative;
+}
+
+.header_cont{
+    max-width: 1280px;
+    position: relative;
+    margin: 0 auto;
+    height: 100px;
+}
+
+h1{
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+h1 img{
+    display: block;
+    width: 46px;
+}
+
+/* gnb */
+
+.gnb{
+    width: 984px;
+    text-align: center;
+    position: absolute;
+    top: 38px;
+    left: 148px;
+}
+
+.gnb>nav>ul{
+    display: flex;
+}
+
+.gnb>nav>ul>li{
+    font-size: 18px;
+    font-weight: bold;
+    width: 164px;
+}
+
+.gnb>nav>ul>li>a:hover{
+    color: #C30F30;
+    transition: all 0.3s;
+}
+
+.gnb > nav > ul:hover ul{
+    opacity: 1;
+    height: 200px;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+.gnb>nav>ul>li>ul{ 
+    font-size: 16px;
+    font-weight: normal;
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    transition: all 0.3s;
+    z-index: 30;
+    position: relative;
+}
+
+.gnb>nav>ul>li>ul>li{
+    margin-bottom: 16px;
+}
+
+.gnb>nav>ul>li>ul>li>a{
+    color: #ffffff;
+}
+
+.gnb>nav>ul>li>ul>li>a:hover{
+    color: #C30F30;
+    transition: all 0.3s;
+    font-weight: normal;
+}
+
+.gnb_bg.slide-down {
+    height: 200px;  
+    opacity: 1;
+  }
+
+.gnb_bg{
+  position: absolute;
+  z-index: 20;
+  height: 0;
+  opacity: 0;
+  width: 100%;
+  background-color: #453F3E;
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+
+.submenu {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out; /* 슬라이드 다운 애니메이션 */
+}
+
+/* 메뉴가 열릴 때 */
+.submenu.open {
+    height: auto; /* auto는 실제 콘텐츠의 크기에 맞게 조정 */
+    overflow: visible;
+    transition: height 0.3s ease-out;
+}
+
+/* util menu */
+
+.util_menu01{
+    font-size: 14px;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    color: #666666;
+}
+
+.util_menu01>a:hover{
+    color: #000;
+}
+
+/* hamburger menu */
+
+.hamburger_menu>button{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 16px;
+}
+
+.main_go_to{
+   position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;   
+    padding: 40px;
+    box-sizing: border-box;
+    background: #412D2D;
+    color: #ffffff;
+}
+
+.main_go_to.show {
+    display:block;
+}
+
+.main_go_to.hide {
+    display: none;
+}
+
+
+
+.header h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 img{
+    width: 96px;
+}
+
+.main_go_to>ul>li>a{
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+.main_go_to>ul>li ul{
+    font-size: 20px;
+   /* display: none; */
+}
+
+.main_go_to>ul>li ul a{
+    color: #ffffff;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.main_go_to a:hover{
+    color: #C30F30;
+    transition: all 0.3s;
+}
+
+.util_menu02{
+    margin-top: 40px;
+    font-size: 20px;
+    color: #666666;
+    display: flex;
+    justify-content: center;
+}
+
+.util_menu02 a{
+    border-right: 1px solid #666666;
+    padding: 0 30px;
+    box-sizing: border-box;
+    color: #868686;
+}
+
+.util_menu02 a:hover{
+    color: #ffffff;
+}
+
+.util_menu02 a:last-child{
+    border-right: none;
+}
+
+.header button{
+    background: none;
+    border: none;
+}
+
+.close_btn{
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* tablet pc ver */
+@media (min-width:768px) and (max-width:1279px){
+    .header_cont{
+        height: 80px;
+    }
+    h1{
+        left: 10px;
+        top: 13px;
+    }
+    .gnb{display: none;}
+    .util_menu01{display: none;}
+    .hamburger_menu>button{
+        display: inline-block;
+    }
+    
+}
+
+
+/* mobile ver */
+@media screen and (max-width:767px){
+    .header_cont{
+        height: 80px;
+    }
+    h1{
+        left: 10px;
+        top: 13px;
+    }
+   .gnb{display: none;}
+   .util_menu01{display: none;}
+   .hamburger_menu>button{
+    display: inline-block;
+}
+.util_menu02{
+    border-top: 1px solid #666666;
+    padding: 20px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+}  
+.util_menu02 a{
+    width: 100%;
+    display: flex;
+    border-right: none;
+    padding:20px 0;
+    box-sizing: border-box;
+}
+
+
+}
+
+
+
